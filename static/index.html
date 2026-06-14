@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ML Wiki MCP Tool</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="window-bar">
+      <span></span><span></span><span></span>
+      <strong>ML Wiki</strong>
+    </div>
+    <main class="app">
+      <aside class="sidebar">
+        <header>
+          <h1>ML Wiki</h1>
+          <p><span id="pageCount">0</span> pages · <b>validate OK</b> · agent CLI bridge</p>
+        </header>
+        <input id="search" type="search" placeholder="검색 (제목/태그/본문)...">
+        <nav id="pageList"></nav>
+      </aside>
+      <section class="article">
+        <div id="chips" class="chips"></div>
+        <article id="content"></article>
+      </section>
+      <aside class="chat">
+        <div class="chat-head">
+          <h2>🤖 위키 에이전트</h2>
+          <button id="reset">대화 초기화</button>
+        </div>
+        <div id="messages" class="messages"></div>
+        <form id="chatForm" class="composer">
+          <input id="question" placeholder="질문/검토/수정 요청...">
+          <button>전송</button>
+        </form>
+      </aside>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

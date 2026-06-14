@@ -1,0 +1,31 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local agent message runtime
+agent_messages/inbox/*
+agent_messages/outbox/*
+agent_messages/processed/*
+!agent_messages/inbox/.gitkeep
+!agent_messages/outbox/.gitkeep
+!agent_messages/processed/.gitkeep
+
+# User-provided or generated raw materials.
+# Keep the folder structure and README files, but do not publish private sources.
+raw/inbox/*
+raw/extracted/*
+raw/processed/*
+!raw/inbox/README.md
+!raw/inbox/.gitkeep
+!raw/extracted/.gitkeep
+!raw/processed/README.md
+!raw/processed/.gitkeep
+
+# Generated merge requests can include raw source excerpts.
+wiki/merge-queue/*.md
+!wiki/merge-queue/README.md
+
+# Local environment
+.venv/
+venv/
+.env

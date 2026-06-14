@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schema/raw-source.schema.json",
+  "title": "Raw Source",
+  "type": "object",
+  "required": ["path", "type", "status"],
+  "properties": {
+    "path": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["pdf", "markdown", "text"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["inbox", "extracted", "processed", "merged", "review"]
+    },
+    "suggested_target": {
+      "type": "string"
+    },
+    "created": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "additionalProperties": false
+}
